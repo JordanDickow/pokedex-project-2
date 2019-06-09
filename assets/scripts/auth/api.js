@@ -15,7 +15,7 @@ const userSignUp = formData => {
 const userSignIn = formData => {
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + '/sign-in',
+    url: config.apiUrl + `/sign-in`,
     method: 'POST',
     data: formData
 
@@ -25,7 +25,7 @@ const userSignIn = formData => {
 const userPassWord = formData => {
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + '/change-password',
+    url: config.apiUrl + `/change-password`,
     method: 'PATCH',
     data: formData,
     headers: {
@@ -35,7 +35,7 @@ const userPassWord = formData => {
   })
 }
 
-const userSignOut = () => {
+const userSignOut = (formData) => {
   console.log(store)
   console.log('store is', store)
   return $.ajax({

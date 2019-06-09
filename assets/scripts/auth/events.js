@@ -28,16 +28,16 @@ const onUserPassWord = event => {
   const form = event.target
   const formData = getFormFields(form)
   console.log(formData)
-  api.onUserPassword(formData)
-    .then(ui.onUserPasswordSuccess)
-    .catch(ui.onUserPasswordFailure)
+  api.userPassWord(formData)
+    .then(ui.onUserPassWordSuccess)
+    .catch(ui.onUserPassWordFailure)
 }
 const onUserSignOut = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
   console.log(formData)
-  api.onUserPassword(formData)
+  api.userSignOut(formData)
     .then(ui.onUserSignOutSuccess)
     .catch(ui.onUserSignOutFailure)
 }
