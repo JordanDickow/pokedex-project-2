@@ -13,6 +13,38 @@ const onUserSignUp = event => {
     .catch(ui.onUserSignUpFailure)
 }
 
+const onUserSignIn = event => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+  api.userSignIn(formData)
+    .then(ui.onUserSignInSuccess)
+    .catch(ui.onUserSignInFailure)
+}
+
+const onUserPassWord = event => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+  api.onUserPassword(formData)
+    .then(ui.onUserPasswordSuccess)
+    .catch(ui.onUserPasswordFailure)
+}
+const onUserSignOut = event => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+  api.onUserPassword(formData)
+    .then(ui.onUserSignOutSuccess)
+    .catch(ui.onUserSignOutFailure)
+}
+
 module.exports = {
-  onUserSignUp
+  onUserSignUp,
+  onUserSignIn,
+  onUserPassWord,
+  onUserSignOut
 }

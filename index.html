@@ -13,17 +13,28 @@
     </head>
     <body>
       <h1>Pokedex</h1>
+      <section>
+      </section>
+      <h5> Trainer Sign Up</h5>
       <form id="sign-up">
       <input type='email'name="credentials[email]" placeholder="email">
       <input type='password'name="credentials[password]"placeholder="password">
       <input type='password'name="credentials[password_confirmation]"placeholder="password confirmation">
       <input type='submit' value='Submit'>
-
+      <h5> Trainer Sign In</h5>
     </form>
     <form id="sign-in">
     <input type='email'name="credentials[email]" placeholder="email">
     <input type='password'name="credentials[password]"placeholder="password">
     <input type='submit' value='Submit'>
+    <h6> Change Password </h6>
+    <form id="change-password">
+    <input name='passwords[old]' type="passwords" placeholder="old password">
+    <input type='passwords[new]'name="passwords"placeholder=" new password">
+    <input type='submit' value='Submit'>
+    <h6>Trainer Sign Out</h6>
+    <form id="sign-out">
+    <input type='submit' value='SignOut'>
 
   </form>
     </body>
