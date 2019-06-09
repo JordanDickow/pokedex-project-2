@@ -1,15 +1,13 @@
+'use strict'
 // const store = require('../store')
-
 const onUserSignUpSuccess = responseData => {
   console.log(responseData)
-    .addClass('success')
-    .removeClass('failure')
+  console.log('success')
 }
 
 const onUserSignUpFailure = responseData => {
   console.log(responseData)
-    .addClass('failure')
-    .removeClass('success')
+  console.log('failure')
 }
 module.exports = {
   onUserSignUpSuccess,
