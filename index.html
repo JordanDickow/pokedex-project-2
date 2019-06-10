@@ -13,8 +13,7 @@
     </head>
     <body>
       <h1>Pokedex</h1>
-      <section>
-      </section>
+
       <h5> Trainer Sign Up</h5>
       <form id="sign-up">
       <input name="credentials[email]" type="text" placeholder="email">
@@ -31,12 +30,29 @@
     <h6> Change Password </h6>
     <form id="change-password">
     <input name="passwords[old]"  type="password" placeholder="old password">
-    <input type= "passwords[new]" type="password" placeholder="new password">
+    <input  name= "passwords[new]" type="password" placeholder="new password">
     <input type='submit' value='Submit'>
   </form>
     <h6>Trainer Sign Out</h6>
     <form id="sign-out">
     <input type='submit' value='SignOut'>
   </form>
+  <h4> Create Pokemon </h4>
+  <form id="create-pokemon">
+  <input name="pokemon[name]" type="text" placeholder="name">
+  <input type='submit' value='Create'>
+</form>
+<h4> Get Pokemon </h4>
+<form id="get-pokemon">
+<input type='submit' value="Get">
+</form>
+<h4>Update Pokemon </h4>
+<form id="update-pokemon">
+<input name="pokemon[old]"  type="text" placeholder="old name">
+<input  name= "passwords[new]" type="password" placeholder="new name">
+</form>
+
+
+
     </body>
 </html>

@@ -2,7 +2,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const userSignUp = formData => {
+const userSignUp = (formData) => {
   console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -12,7 +12,7 @@ const userSignUp = formData => {
   })
 }
 
-const userSignIn = formData => {
+const userSignIn = (formData) => {
   console.log(store)
   return $.ajax({
     url: config.apiUrl + `/sign-in`,
@@ -22,7 +22,7 @@ const userSignIn = formData => {
   })
 }
 
-const userPassWord = formData => {
+const userPassWord = (formData) => {
   console.log(store)
   return $.ajax({
     url: config.apiUrl + `/change-password`,
@@ -30,6 +30,7 @@ const userPassWord = formData => {
     data: formData,
     headers: {
       Authorization: 'Token token=' + store.user.token
+
     }
 
   })
@@ -37,7 +38,7 @@ const userPassWord = formData => {
 
 const userSignOut = (formData) => {
   console.log(store)
-  console.log('store is', store)
+  console.log(store)
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
