@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <style>
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+</style>
       <title>Pokedex</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,18 +23,20 @@
       <input name="credentials[password]" type="password" placeholder="password">
       <input name="credentials[password_confirmation]" type="password" placeholder="password">
       <input type='submit' value='Submit'>
-    </form>
+      </form>
+      <section>
       <h5> Trainer Sign In</h5>
     <form id="sign-in">
     <input name="credentials[email]" type="text" placeholder="email">
     <input name="credentials[password]" type="password" placeholder="password">
-    <input type='submit' value='Submit'>
+    <input type='submit' value='Sign In'>
   </form>
+
     <h6> Change Password </h6>
     <form id="change-password">
     <input name="passwords[old]"  type="password" placeholder="old password">
     <input  name= "passwords[new]" type="password" placeholder="new password">
-    <input type='submit' value='Submit'>
+    <input type='submit' value='Change'>
   </form>
     <h6>Trainer Sign Out</h6>
     <form id="sign-out">
@@ -42,16 +47,23 @@
   <input name="pokemon[name]" type="text" placeholder="name">
   <input type='submit' value='Create'>
 </form>
-<h4> Get Pokemon </h4>
+<h6> Get Pokemon </h6>
 <form id="get-pokemon">
 <input type='submit' value="Get">
 </form>
-<h4>Update Pokemon </h4>
+<h6>Update Pokemon </h6>
 <form id="update-pokemon">
-<input name="pokemon[old]"  type="text" placeholder="old name">
-<input  name= "passwords[new]" type="password" placeholder="new name">
+  <input name="pokemon[name]" type="text" placeholder="name">
+    <input name="id" type="number" placeholder="ID">
+  <input type='submit' value='Update'>
 </form>
-
+<h6>Delete Pokemon </h6>
+<form id="delete-pokemon">
+  <input name="Delete Pokemon" type="text" placeholder="name">
+  <input name="id" type="number" placeholder="ID">
+  <input type='submit' value='Delete'>
+</form>
+</section>
 
 
     </body>

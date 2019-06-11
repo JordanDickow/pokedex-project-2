@@ -1,4 +1,4 @@
-curl "https://enigmatic-retreat-33385.herokuapp.com/pokemons/${ID}" \
+curl "http://localhost:4741/pokemons/${ID}" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \

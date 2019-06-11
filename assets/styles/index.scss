@@ -1,5 +1,51 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-color: #FFFF00;
+  }
+
 h1 {
   display: flex;
- justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  justify-content: center;
+}
+
+h5 {
+    font-family: 'Press Start 2P', cursive;
+}
+h6 {
+  font-family: 'Press Start 2P', cursive;
+}
+h4 {
+    font-family: 'Press Start 2P', cursive;
+}
+  #sign-up{
+  font-family: 'Press Start 2P', cursive;
+}
+
+  #sign-in{
+  font-family: 'Press Start 2P', cursive;
+}
+
+  #change-password {
+  font-family: 'Press Start 2P', cursive;
+}
+  #sign-out {
+  font-family: 'Press Start 2P', cursive;
+
+}
+  #change-password {
+  font-family: 'Press Start 2P', cursive;
+ }
+
+#create-pokemon {
+  font-family: 'Press Start 2P', cursive;
+}
+
+  #get-pokemon {
+  font-family: 'Press Start 2P', cursive;
+}
+
+  #update-pokemon {
+  font-family: 'Press Start 2P', cursive;
 }

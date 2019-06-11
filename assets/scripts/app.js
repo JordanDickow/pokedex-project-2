@@ -9,6 +9,7 @@ const authEvents = require('../../assets/scripts/auth/events.js')
 const pokedexEvent = require('../../assets/scripts/pokedex/event.js')
 $(() => {
 // User events
+
   $('#sign-up').on('submit', authEvents.onUserSignUp)
   $('#sign-in').on('submit', authEvents.onUserSignIn)
   $('#change-password').on('submit', authEvents.onUserPassWord)
@@ -16,5 +17,6 @@ $(() => {
   // Poke´dex events
   $('#create-pokemon').on('submit', pokedexEvent.onCreatePokemon)
   $('#get-pokemon').on('submit', pokedexEvent.onGetPokemon)
-  $('#update-pokemon').on('submit', pokedexEvent.UpdatePokemon)
+  $('#update-pokemon').on('submit', pokedexEvent.onUpdatePokemon)
+  $('#delete-pokemon').on('submit', pokedexEvent.onDeletePokemon)
 })

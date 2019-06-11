@@ -1,4 +1,4 @@
-curl "https://enigmatic-retreat-33385.herokuapp.com/pokemons" \
+curl "http://localhost:4741/pokemons" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

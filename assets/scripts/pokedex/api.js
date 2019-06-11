@@ -28,8 +28,20 @@ const getPokemon = (formData) => {
 const updatePokemon = (formData) => {
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + `/pokemons` + `${ID}`,
+    url: config.apiUrl + `/pokemons/${formData.id}`,
     method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: formData
+  })
+}
+
+const deletePokemon = (formData) => {
+  console.log(store)
+  return $.ajax({
+    url: config.apiUrl + `/pokemons/${formData.id}`,
+    method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
@@ -40,5 +52,6 @@ module.exports =
 {
   createPokemon,
   getPokemon,
-  updatePokemon
+  updatePokemon,
+  deletePokemon
 }

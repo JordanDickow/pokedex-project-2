@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store')
 const onUserSignUpSuccess = responseData => {
+
   console.log(responseData)
   console.log('success')
 }
@@ -11,6 +12,7 @@ const onUserSignUpFailure = responseData => {
 }
 
 const onUserSignInSuccess = data => {
+
   store.user = data.user
   console.log(store.user)
   console.log('success')

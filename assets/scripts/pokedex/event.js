@@ -29,13 +29,24 @@ const onUpdatePokemon = event => {
   const formData = getFormFields(form)
   console.log(formData)
   api.updatePokemon(formData)
-    .then(ui.onGetPokemonSuccess)
-    .catch(ui.onGetPokemonFailure)
+    .then(ui.onUpdatePokemonSuccess)
+    .catch(ui.onUpdatePokemonFailure)
+}
+
+const onDeletePokemon = event => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+  api.deletePokemon(formData)
+    .then(ui.onDeletePokemonSuccess)
+    .catch(ui.onDeletePokemonFailure)
 }
 
 module.exports =
 {
   onCreatePokemon,
   onGetPokemon,
-  onUpdatePokemon
+  onUpdatePokemon,
+  onDeletePokemon
 }
