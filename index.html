@@ -18,6 +18,7 @@
       <h1>Pokedex</h1>
 
       <h5> Trainer Sign Up</h5>
+      <div class="message1"></div>
       <form id="sign-up">
       <input name="credentials[email]" type="text" placeholder="email">
       <input name="credentials[password]" type="password" placeholder="password">
@@ -26,6 +27,7 @@
       </form>
       <section>
       <h5> Trainer Sign In</h5>
+      <div class="message2"></div>
     <form id="sign-in">
     <input name="credentials[email]" type="text" placeholder="email">
     <input name="credentials[password]" type="password" placeholder="password">
@@ -33,36 +35,44 @@
   </form>
 
     <h6> Change Password </h6>
+    <div class="message3"></div>
     <form id="change-password">
     <input name="passwords[old]"  type="password" placeholder="old password">
     <input  name= "passwords[new]" type="password" placeholder="new password">
     <input type='submit' value='Change'>
   </form>
     <h6>Trainer Sign Out</h6>
+    <div class="message4"></div>
     <form id="sign-out">
     <input type='submit' value='SignOut'>
   </form>
   <h4> Create Pokemon </h4>
+  <div class="message5"></div>
   <form id="create-pokemon">
   <input name="pokemon[name]" type="text" placeholder="name">
   <input type='submit' value='Create'>
 </form>
 <h6> Get Pokemon </h6>
+<div class="message6"></div>
 <form id="get-pokemon">
 <input type='submit' value="Get">
 </form>
 <h6>Update Pokemon </h6>
+<div class="message7"></div>
 <form id="update-pokemon">
   <input name="pokemon[name]" type="text" placeholder="name">
     <input name="id" type="number" placeholder="ID">
   <input type='submit' value='Update'>
 </form>
 <h6>Delete Pokemon </h6>
+<div class="message8"></div>
 <form id="delete-pokemon">
   <input name="Delete Pokemon" type="text" placeholder="name">
   <input name="id" type="number" placeholder="ID">
-  <input type='submit' value='Delete'>
+  <button data-id="{{pokemons.id}}"class="btn btn-danger delete-pokemon">Delete Pokemon!</button>
+  <!-- <input type='submit' value='Delete'> -->
 </form>
+
 </section>
 
 

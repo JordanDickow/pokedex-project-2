@@ -1,8 +1,8 @@
 'use strict'
 const store = require('../store')
 const onUserSignUpSuccess = responseData => {
-
   console.log(responseData)
+$('#message1').text('Yay New F!')
   console.log('success')
 }
 

@@ -37,17 +37,16 @@ const updatePokemon = (formData) => {
   })
 }
 
-const deletePokemon = (formData) => {
-  console.log(store)
+const deletePokemon = function (id) {
   return $.ajax({
-    url: config.apiUrl + `/pokemons/${formData.id}`,
+    url: config.apiUrl + '/pokemons/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: formData
+    }
   })
 }
+
 module.exports =
 {
   createPokemon,

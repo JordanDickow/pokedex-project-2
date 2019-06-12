@@ -1,3 +1,6 @@
+'use-strict'
+const showPokedexTemplate = require('../templates/pokedex-listing-handlebars.handlebars')
+
 const onCreatePokemonSuccess = responseData => {
   console.log(responseData)
   console.log('success')
@@ -10,7 +13,6 @@ const onCreatePokemonFailure = responseData => {
 
 const onGetPokemonSuccess = responseData => {
   console.log(responseData)
-  console.log('success')
 }
 
 const onGetPokemonFailure = responseData => {
@@ -28,9 +30,12 @@ const onUpdatePokemonFailure = responseData => {
   console.log('failure')
 }
 
-const onDeletePokemonSuccess = responseData => {
-  console.log(responseData)
+const deletePokemonSuccess = (data) => {
+  console.log(data)
   console.log('success')
+  const showPokedexHtml = showPokedexTemplate({ pokemon: data.pokemons })
+  console.log('success')
+  $('.content').html(showPokedexHtml)
 }
 
 const onDeletePokemonFailure = responseData => {
@@ -44,7 +49,7 @@ module.exports = {
   onGetPokemonFailure,
   onUpdatePokemonSuccess,
   onUpdatePokemonFailure,
-  onDeletePokemonSuccess,
+  deletePokemonSuccess,
   onDeletePokemonFailure
 
 }
