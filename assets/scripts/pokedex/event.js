@@ -15,12 +15,9 @@ const onCreatePokemon = event => {
 
 const onGetPokemon = event => {
   event.preventDefault()
-  const form = event.target
-  const formData = getFormFields(form)
-  console.log(formData)
-  api.getPokemon(formData)
+  api.getPokemon()
     .then(ui.onGetPokemonSuccess)
-    .catch(ui.onGetPokemonFailure)
+    .catch(ui.failure)
 }
 
 const onUpdatePokemon = event => {
@@ -45,6 +42,7 @@ const onDeletePokemon = event => {
 }
 const addHandlers = () => {
   $('#content').on('click', 'delete-pokemon', onDeletePokemon)
+  $('#content').on('click', 'get-pokemon', onGetPokemon)
 }
 
 module.exports =

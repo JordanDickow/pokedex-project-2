@@ -13,15 +13,13 @@ const createPokemon = (formData) => {
   })
 }
 
-const getPokemon = (formData) => {
-  console.log(store)
+const getPokemon = () => {
   return $.ajax({
-    url: config.apiUrl + `/pokemons`,
+    url: config.apiUrl + '/pokemons/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data: formData
+    }
   })
 }
 

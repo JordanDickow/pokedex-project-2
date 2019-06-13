@@ -1,11 +1,8 @@
+  <h6>Your Pokemon:</h6>
 {{#each pokemon as |pokemons|}}
-  {{log book}}
   <section data-id="{{pokemons.id}}">
-    <h6>PokeDex</h6>
     <h3>
       {{limit pokemons.name 15}}
-    </h2>
-    <h6>pokemon:</h6>
-    <button data-id="{{pokemons.id}}"class="btn btn-danger delete-pokemon">Delete Pokemon!</button>
+    </h3>
   </section>
 {{/each}}
