@@ -7,6 +7,7 @@ const onCreatePokemonSuccess = responseData => {
 }
 
 const onCreatePokemonFailure = responseData => {
+  $('Whoops - looks like we have an error!').delay(1000).hide('Whoops-looks like we have an error!')
   console.log(responseData)
 }
 const onGetPokemonSuccess = data => {
