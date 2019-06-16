@@ -52,6 +52,12 @@
     <form id="create-pokemon">
       <input name="pokemon[name]"  class="logged-in" type="text" placeholder="name">
       <input type='submit'  class="logged-in" value='Create'>
+      <script>
+       function submitform(){
+           $('#create-pokemon').find('form').submit();
+           $('.clearFields').val('');
+       }
+  </script>
     </form>
     <h6 class="logged-in"> Get Pokemon </h6>
     <div class="message6"></div>
@@ -74,6 +80,7 @@
       <button data-id="{{pokemons.id}}" class="logged-in" class="btn btn-danger delete-pokemon">Delete Pokemon!</button>
       <!-- <input type='submit' value='Delete'> -->
     </form>
+
 
   </section>
 <div class="content"></div>
