@@ -19,13 +19,13 @@
 <body>
   <h1>Pokedex</h1>
 
-  <h5 class="sign-up"> Trainer Sign Up</h5>
+  <h5 class="signed-in"> Trainer Sign Up</h5>
   <div class="message1"></div>
   <form id="sign-up">
-    <input name="credentials[email]" class="sign-up" type="text" placeholder="email">
-    <input name="credentials[password]" class="sign-up" type="password" placeholder="password">
-    <input name="credentials[password_confirmation]" class="sign-up" type="password" placeholder="password">
-    <input type='submit' class="sign-up" value='Submit'>
+    <input name="credentials[email]" class="signed-in" type="text" placeholder="email">
+    <input name="credentials[password]" class="signed-in" type="password" placeholder="password">
+    <input name="credentials[password_confirmation]" class="signed-in" type="password" placeholder="password">
+    <input type='submit' class="signed-in" value='Submit'>
   </form>
   <section>
     <h5 class="signed-in"> Trainer Sign In</h5>
@@ -47,29 +47,27 @@
     <form id="sign-out">
       <input type='submit' class="logged-in" value='SignOut'>
     </form>
+
     <h4 class="logged-in"> Create Pokemon </h4>
     <div class="message5"></div>
     <form id="create-pokemon">
       <input name="pokemon[name]"  class="logged-in" type="text" placeholder="name">
-      <input type='submit'  class="logged-in" value='Create'>
-      <script>
-       function submitform(){
-           $('#create-pokemon').find('form').submit();
-           $('.clearFields').val('');
-       }
-  </script>
+      <input type="submit"  class="logged-in" value='Create'>
+      <input type="reset" class="logged-in" value="Reset">
     </form>
     <h6 class="logged-in"> Get Pokemon </h6>
     <div class="message6"></div>
     <form id="get-pokemon">
       <button id="getPokemonButton" class="logged-in" class="btn btn-info mr-2 get-pokemon">Fetch Pokemon!</button>
+
     </form>
     <h6 class="logged-in">Update Pokemon </h6>
     <div class="message7"></div>
     <form id="update-pokemon">
       <input name="pokemon[name]" class="logged-in" type="text" placeholder="name">
-      <input name="id" t class="logged-in" type="number" placeholder="ID">
+      <input name="id"  class="logged-in" type="number" placeholder="ID">
       <input type='submit'  class="logged-in" value='Update'>
+        <input type="reset" class="logged-in" value="Reset">
     </form>
 
     <h6 class="logged-in">Delete Pokemon </h6>
