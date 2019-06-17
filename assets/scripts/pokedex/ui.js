@@ -30,11 +30,9 @@ const onUpdatePokemonFailure = responseData => {
   console.log(responseData)
 }
 
-const deletePokemonSuccess = (data) => {
-  $('.btn btn-danger delete-pokemon').text('You released a Pokemon!').delay(1000).hide('You released a pokemon!')
-  console.log(data)
-  const showPokedexHtml = showPokedexTemplate({ pokemon: data.pokemons })
-  $('.content').html(showPokedexHtml)
+const deletePokemonSuccess = (responseData) => {
+  $('.content').text('You released a Pokemon!').delay(1000).hide('You released a pokemon!')
+  console.log(responseData)
 }
 
 const onDeletePokemonFailure = responseData => {

@@ -35,7 +35,6 @@ const onDeletePokemon = event => {
   const form = event.target
   const formData = getFormFields(form)
   console.log(formData.id)
-  const id = $(event.target).data('id')
   api.deletePokemon(formData.id)
     .then()
     .catch(ui.failure)
