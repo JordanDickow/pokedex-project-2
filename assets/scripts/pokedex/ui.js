@@ -2,11 +2,13 @@
 const showPokedexTemplate = require('../templates/pokedex-listing-handlebars.handlebars')
 
 const onCreatePokemonSuccess = responseData => {
+  $('#create-pokemon').trigger('reset')
   $('.message5').text('You found a new Pokemon!').delay(1000).hide('You found a new Pokemon!')
   console.log(responseData)
 }
 
 const onCreatePokemonFailure = responseData => {
+  $('#create-pokemon').trigger('reset')
   $('Whoops - looks like we have an error!').delay(1000).hide('Whoops-looks like we have an error!')
   console.log(responseData)
 }
@@ -22,22 +24,28 @@ const onGetPokemonFailure = responseData => {
   console.log(responseData)
 }
 const onUpdatePokemonSuccess = responseData => {
+  $('#update-pokemon').trigger('reset')
   $('.message7').text('You renamed your pokemon').delay(800).hide('You renamed your pokemon')
   console.log(responseData)
 }
 const onUpdatePokemonFailure = responseData => {
-  $('.message7').text('You do not have enough pokmeon yet!').delay(800).hide('You do not have enough pokemon yet!')
+  ('#update-pokemon').trigger('reset')
+  $('.message7').click('You do not have enough pokmeon yet!').delay(800).hide('You do not have enough pokemon yet!')
   console.log(responseData)
 }
 
-const deletePokemonSuccess = (responseData) => {
-  $('.content').text('You released a Pokemon!').delay(1000).hide('You released a pokemon!')
+const onDeletePokemonSuccess = (responseData) => {
+  $('#delete-pokemon').trigger('reset')
+  $('.message8').click('You released a Pokemon!').delay(800).hide('You released a pokemon!')
   console.log(responseData)
 }
 
-const onDeletePokemonFailure = responseData => {
+const onDeletePokemonFailure = (responseData) => {
+  $('#delete-pokemon').trigger('reset')
+  $('.message8').text('Nope!').delay(800).hide('Nope!')
   console.log(responseData)
 }
+
 module.exports = {
   onCreatePokemonSuccess,
   onCreatePokemonFailure,
@@ -45,7 +53,7 @@ module.exports = {
   onGetPokemonFailure,
   onUpdatePokemonSuccess,
   onUpdatePokemonFailure,
-  deletePokemonSuccess,
+  onDeletePokemonSuccess,
   onDeletePokemonFailure
 
 }
