@@ -3,46 +3,71 @@ const showPokedexTemplate = require('../templates/pokedex-listing-handlebars.han
 
 const onCreatePokemonSuccess = responseData => {
   $('#create-pokemon').trigger('reset')
-  $('.message5').text('You found a new Pokemon!').delay(1000).hide('You found a new Pokemon!')
+  $('.message5').text('You found a new Pokemon!')
+  setTimeout(function () {
+    $('.message5').hide()
+  }, 2000)
   console.log(responseData)
 }
 
 const onCreatePokemonFailure = responseData => {
   $('#create-pokemon').trigger('reset')
-  $('Whoops - looks like we have an error!').delay(1000).hide('Whoops-looks like we have an error!')
+  $('.message5').text('Whoops - looks like we have an error!')
+  setTimeout(function () {
+    $('.message5').hide()
+  }, 2000)
   console.log(responseData)
 }
 const onGetPokemonSuccess = data => {
-  $('.message6').text('Scroll Down!').delay(800).hide('Scroll Down!')
+  $('.message6').text('Scroll Down!')
+  setTimeout(function () {
+    $('.message6').hide()
+  }, 2000)
   console.log(data)
   const showPokedexHtml = showPokedexTemplate({ pokemon: data.pokemons })
   $('.content').html(showPokedexHtml)
 }
 
 const onGetPokemonFailure = responseData => {
-  $('.message6').text('Looks like the pokeverse is down').delay(800).hide('Looks like the pokeverse is down')
+  $('.message6').text('Looks like the pokeverse is down')
+  setTimeout(function () {
+    $('.message6').hide()
+  }, 2000)
   console.log(responseData)
 }
 const onUpdatePokemonSuccess = responseData => {
   $('#update-pokemon').trigger('reset')
-  $('.message7').text('You renamed your pokemon').delay(800).hide('You renamed your pokemon')
+  $('.message7').text('You renamed your pokemon')
+  setTimeout(function () {
+    $('.message7').hide()
+  }, 2000)
   console.log(responseData)
 }
 const onUpdatePokemonFailure = responseData => {
-  ('#update-pokemon').trigger('reset')
-  $('.message7').click('You do not have enough pokmeon yet!').delay(800).hide('You do not have enough pokemon yet!')
   console.log(responseData)
+  $('#update-pokemon').trigger('reset')
+
+  $('.message7').text('You do not have enough pokmeon yet!')
+  setTimeout(function () {
+    $('.message7').hide()
+  }, 2000)
 }
 
 const onDeletePokemonSuccess = (responseData) => {
   $('#delete-pokemon').trigger('reset')
-  $('.message8').click('You released a Pokemon!').delay(800).hide('You released a pokemon!')
+  $('.message8').text('You released a Pokemon!')
+  setTimeout(function () {
+    $('.message8').hide()
+  }, 2000)
   console.log(responseData)
 }
 
 const onDeletePokemonFailure = (responseData) => {
   $('#delete-pokemon').trigger('reset')
-  $('.message8').text('Nope!').delay(800).hide('Nope!')
+  $('.message8').text('Nope!')
+  setTimeout(function () {
+    $('.message8').hide()
+  }, 2000)
   console.log(responseData)
 }
 

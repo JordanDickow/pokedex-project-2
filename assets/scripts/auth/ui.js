@@ -46,7 +46,6 @@ const onUserSignOutSuccess = responseData => {
   $('.signed-in').toggle()
   $('.message1').text('Come Back Soon!').delay(800).hide('Come Back Soon!')
   $('.logged-in').toggle()
-  $('.sign-in')
   $('#content').hide()
   console.log(responseData)
 }
