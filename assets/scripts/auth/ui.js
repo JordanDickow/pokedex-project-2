@@ -4,18 +4,18 @@ const onUserSignUpSuccess = responseData => {
   $('#sign-up').trigger('reset')
   $('.sign-up').toggle()
   console.log(responseData)
-  $('.message1').click('Welcome New Trainer!').delay(1000).click('Welcome New Trainer!')
+  $('.message1').text('Welcome New Trainer!').delay(1000)
 }
 
 const onUserSignUpFailure = responseData => {
   $('#sign-up').trigger('reset')
-  $('.message1').text('Trainer already exists').delay(1000).hide('Trainer already exists!')
+  $('.message1').text('Trainer already exists').delay(1000)
   console.log(responseData)
 }
 
 const onUserSignInSuccess = data => {
   $('#sign-in').trigger('reset')
-  $('.message2').text('Oh you again').delay(1000).hide('Oh you again')
+  $('.message2').text('Oh you again').delay(1000)
   $('.signed-in').toggle()
   $('.logged-in').toggle()
   $('sign-up').toggle()
@@ -24,7 +24,7 @@ const onUserSignInSuccess = data => {
 
 const onUserSignInFailure = responseData => {
   $('#sign-in').trigger('reset')
-  $('.message2').text('Check your info!').delay(1000).hide('Check your info!')
+  $('.message2').text('Check your info!').delay(1000)
   console.log(responseData)
 }
 
