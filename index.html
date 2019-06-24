@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+  </style>
+  <title>Pokedex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Pokedex</h1>
+
+  <h5 class="signed-in"> Trainer Sign Up</h5>
+  <div class="message1"></div>
+  <form id="sign-up">
+    <input name="credentials[email]" class="signed-in" type="text" placeholder="email">
+    <input name="credentials[password]" class="signed-in" type="password" placeholder="password">
+    <input name="credentials[password_confirmation]" class="signed-in" type="password" placeholder="password">
+    <input type='submit' class="signed-in" value='Submit'>
+  </form>
+  <section>
+    <h5 class="signed-in"> Trainer Sign In</h5>
+    <div class="message2"></div>
+    <form id="sign-in">
+      <input name="credentials[email]"  class="signed-in" type="text" placeholder="email">
+      <input name="credentials[password]" class="signed-in" type="password" placeholder="password">
+      <input type='submit' class="signed-in" value='Sign In'>
+    </form>
+    <h6 class="logged-in"> Change Password</h6>
+    <div class="message3"></div>
+    <form id="change-password">
+      <input name="passwords[old]" class="logged-in" type="password" placeholder="old password">
+      <input name="passwords[new]" class="logged-in" type="password" placeholder="new password">
+      <input type='submit' class="logged-in" value='Change'>
+    </form>
+    <h6 class="logged-in">Trainer Sign Out</h6>
+    <div class="message4"></div>
+    <form id="sign-out">
+      <input type='submit' class="logged-in" value='SignOut'>
+    </form>
+
+    <h4 class="logged-in"> Create Pokemon </h4>
+    <div class="message5"></div>
+    <form id="create-pokemon">
+      <input name="pokemon[name]"  class="logged-in" type="text" placeholder="name">
+      <input type="submit"  class="logged-in" value='Create'>
+    </form>
+    <h6 class="logged-in"> Get Pokemon </h6>
+    <div class="message6"></div>
+    <form id="get-pokemon">
+      <div id="id"></div>
+      <button id="getPokemonButton" class="logged-in" class="btn btn-info mr-2 get-pokemon">Fetch Pokemon!</button>
+
+    </form>
+    <h6 class="logged-in">Update Pokemon </h6>
+    <div class="message7"></div>
+    <form id="update-pokemon">
+      <input name="pokemon[name]" class="logged-in" type="text" placeholder="name">
+      <input name="id"  class="logged-in" type="number" placeholder="ID">
+      <input type='submit'  class="logged-in" value='Update'>
+    </form>
+
+    <h6 class="logged-in">Delete Pokemon </h6>
+    <div class="message8"></div>
+    <form id="delete-pokemon">
+      <input name="Delete Pokemon" class="logged-in" type="text" placeholder="name">
+      <input name="id" type="number"  class="logged-in" placeholder="ID">
+      <button data-id="{{pokemons.id}}" class="logged-in" class="btn btn-danger delete-pokemon">Delete Pokemon!</button>
+    </form>
+
+
+  </section>
+<div class="content"></div>
+
+</body>
+
+</html>
