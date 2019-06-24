@@ -19,7 +19,9 @@ const onCreatePokemonFailure = responseData => {
   console.log(responseData)
 }
 const onGetPokemonSuccess = data => {
-  $('.message6').text('Scroll Down!')
+  $('#get-pokemon').click(function () {
+    $('.message6').text('Scroll Down!')
+  })
   setTimeout(function () {
     $('.message6').hide()
   }, 2000)

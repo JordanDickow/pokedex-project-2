@@ -15,9 +15,12 @@ const onCreatePokemon = event => {
 
 const onGetPokemon = event => {
   event.preventDefault()
-  api.getPokemon()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log(formData)
+  api.getPokemon(formData.id)
     .then(ui.onGetPokemonSuccess)
-    .catch(ui.failure)
+    .catch(ui.onGetPokemonFailure)
 }
 
 const onUpdatePokemon = event => {
