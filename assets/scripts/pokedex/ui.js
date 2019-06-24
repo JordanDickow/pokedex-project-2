@@ -7,7 +7,6 @@ const onCreatePokemonSuccess = responseData => {
   setTimeout(function () {
     $('.message5').hide()
   }, 2000)
-  console.log(responseData)
 }
 
 const onCreatePokemonFailure = responseData => {
@@ -16,14 +15,13 @@ const onCreatePokemonFailure = responseData => {
   setTimeout(function () {
     $('.message5').hide()
   }, 2000)
-  console.log(responseData)
 }
 const onGetPokemonSuccess = data => {
   $('.message6').text('Scroll Down!')
   setTimeout(function () {
     $('.message6').hide()
   }, 2000)
-  console.log(data)
+
   const showPokedexHtml = showPokedexTemplate({ pokemon: data.pokemons })
   $('.content').html(showPokedexHtml)
 }
@@ -33,7 +31,7 @@ const onGetPokemonFailure = responseData => {
   setTimeout(function () {
     $('.message6').hide()
   }, 2000)
-  console.log(responseData)
+
 }
 const onUpdatePokemonSuccess = responseData => {
   $('#update-pokemon').trigger('reset')
@@ -41,10 +39,8 @@ const onUpdatePokemonSuccess = responseData => {
   setTimeout(function () {
     $('.message7').hide()
   }, 2000)
-  console.log(responseData)
 }
 const onUpdatePokemonFailure = responseData => {
-  console.log(responseData)
   $('#update-pokemon').trigger('reset')
 
   $('.message7').text('You do not have enough pokmeon yet!')
@@ -59,7 +55,6 @@ const onDeletePokemonSuccess = (responseData) => {
   setTimeout(function () {
     $('.message8').hide()
   }, 2000)
-  console.log(responseData)
 }
 
 const onDeletePokemonFailure = (responseData) => {
@@ -68,7 +63,6 @@ const onDeletePokemonFailure = (responseData) => {
   setTimeout(function () {
     $('.message8').hide()
   }, 2000)
-  console.log(responseData)
 }
 
 module.exports = {
