@@ -1,26 +1,32 @@
 {
-"version": "1.0.0",
-"name": "Pokedex",
-"description": "A library of pokemon that you have caught.
-You're able to create, update, and delete(release) pokemon in your pokedex!",
-"type": "web",
-"launch_path": "https://github.com/JordanDickow/pokedex-project-2/index.html",
-"icons": {
-  "56": "/img/pokedex.jpeg",
-  "112": "/img/pokedex2.jpeg"
-},
-"developer": {
-  "name": "Jordan Dickow",
-  "url": "https://jordandickow.github.io/"
-},
-"locales": {
-  "en-US": {
-    "name": "Pokedex",
-    "subtitle": "Keep all the pokemon that you caught in your pokedex!
-    Update  your pokemon's name or release them badk in the wild!",
-    "description": "A library of pokemon that you have caught.
-    You're able to create, update, and delete(release) pokemon in your pokedex!"
-    }
-},
-"default_locale": "en-US"
+  "version": "1.0.0",
+      "name": "Pokedex",
+      "description": "A library of pokemon that you have caught.
+      You're able to create, update, and delete(release) pokemon in your pokedex!",
+      "type": "web",
+      "launch_path": "https://github.com/JordanDickow/pokedex-project-2/index.html",
+
+  "icons": {
+        "56": "/Users/jordandickow/sei/projects/pokedex-project-2-client/img/pokedex.jpeg",
+        "112": "/Users/jordandickow/sei/projects/pokedex-project-2-client/img/pokedex2.jpeg"
+  },
+  "developer": {
+    "name": "Jordan Dickow",
+    "url": "https://jordandickow.github.io/"
+  },
+  "locales": {
+    "en-US": {
+      "name": "Pokedex",
+      "subtitle": "Keep all the pokemon that you caught in your pokedex!
+      Update  your pokemon's name or release them badk in the wild!",
+      "description": "A library of pokemon that you have caught.
+      You're able to create, update, and delete(release) pokemon in your pokedex!"
+      }
+  },
+  "default_locale": "en-US",
+
+  "dependencies": {
+        "ads-sdk": "1.3.0"
+  }
+
 }
